@@ -74,6 +74,18 @@ h1 {
   font-weight: 600;
 }
 
+em {
+  font-style: normal;
+  font-weight: 500;
+}
+
+p {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+/* TABLES */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -106,15 +118,7 @@ th {
   font-size: 1.1rem;
 }
 
-em {
-  font-style: normal;
-  font-weight: 500;
-}
-
-p {
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-}
+/* ICON BUTTON */
 
 .icon-btn {
   background: none;
@@ -139,10 +143,14 @@ p {
       background: var(--secondary-dark);
     }
 
+/* PAGES */
+
 .page-container {
   width: 100%;
   box-sizing: border-box;
 }
+
+/* ERRORS & WARNINGS */
 
 .error {
   color: var(--warning);
@@ -156,4 +164,71 @@ p {
 .warning-color-background {
   background-color: var(--warning);
   color: var(--black);
+}
+
+/* TOOLTIP */
+
+[tooltip] {
+  display: inline-block;
+  margin: 50px 20px;
+  width: 180px;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  line-height: 50px;
+}
+
+.ng-tooltip {
+  position: absolute;
+  max-width: 150px;
+  font-size: 14px;
+  text-align: center;
+  color: #f8f8f2;
+  padding: 3px 8px;
+  background: #282a36;
+  border-radius: 4px;
+  z-index: 1000;
+  opacity: 0;
+}
+
+  .ng-tooltip:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+  }
+
+.ng-tooltip-top:after {
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-color: black transparent transparent transparent;
+}
+
+.ng-tooltip-bottom:after {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-color: transparent transparent black transparent;
+}
+
+.ng-tooltip-left:after {
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-color: transparent transparent transparent black;
+}
+
+.ng-tooltip-right:after {
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-color: transparent black transparent transparent;
+}
+
+.ng-tooltip-show {
+  opacity: 1;
 }
